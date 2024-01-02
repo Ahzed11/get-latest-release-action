@@ -1,0 +1,13 @@
+name: 'Get latest release'
+description: 'Get the latest release of your repository'
+inputs:
+  token:
+    description: 'The Github token.'
+    required: false
+    default: ${{ github.token }}
+outputs:
+  latest: # id of output
+    description: "The latest release's name"
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
