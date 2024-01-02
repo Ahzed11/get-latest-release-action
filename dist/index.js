@@ -30796,6 +30796,7 @@ const github = __nccwpck_require__(5231);
 async function run() {
     const context = github.context;
     const token = core.getInput("token");
+    const keepv = core.getInput("keepv");
     const octokit = github.getOctokit(token);
 
     try {
@@ -30806,8 +30807,14 @@ async function run() {
             'X-GitHub-Api-Version': '2022-11-28'
             }
             });
-    
-        core.setOutput("release", release.data.tag_name);
+        
+            let output = release.data.tag_name;
+            if (keepv === "false") {
+                output = output.replace("v", "");
+            }
+
+            core.setOutput("release", output);
+        
     } catch(error) {
         console.log(error.status)
         core.setOutput("release", "");

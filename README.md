@@ -6,6 +6,10 @@
 
 The Github token. Not required.
 
+### `keepv`
+
+Keep the v in front of the version. Not required.
+
 ## Outputs
 
 ### `release`

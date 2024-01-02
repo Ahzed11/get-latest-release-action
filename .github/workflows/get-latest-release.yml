@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Get the latest release
         id: check
-        uses: ahzed11/get-latest-release-action@v1.1
+        uses: ahzed11/get-latest-release-action@v1.2
       - name: Echo the latest release
         run: echo "Latest release ${{ steps.check.outputs.release }}"

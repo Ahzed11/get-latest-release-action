@@ -5,6 +5,10 @@ inputs:
     description: 'The Github token.'
     required: false
     default: ${{ github.token }}
+  keepv:
+    description: 'Keep the v in front of the version.'
+    required: false
+    default: 'true'
 outputs:
   release: # id of output
     description: "The latest release's tag name"
