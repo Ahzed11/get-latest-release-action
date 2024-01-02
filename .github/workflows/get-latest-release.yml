@@ -3,10 +3,10 @@ on: [push]
 jobs:
   has-tags_job:
     runs-on: ubuntu-latest
-    name: Check if we have tags
+    name: Get the latest release
     steps:
-      - name: Check if we have tags
+      - name: Get the latest release
         id: check
         uses: ahzed11/get-latest-release-action@v1.1
-      - name: Get the latest release
-        run: echo "Latest release ${{ steps.check.outputs.latest }}"
+      - name: Echo the latest release
+        run: echo "Latest release ${{ steps.check.outputs.release }}"

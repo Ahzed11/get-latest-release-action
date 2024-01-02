@@ -14,7 +14,7 @@ async function run() {
         }
         });
 
-    core.setOutput("release", tags.data.tag_name);
+    core.setOutput("release", release.data.tag_name);
 }
 
 run();

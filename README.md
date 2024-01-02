@@ -1,4 +1,4 @@
-# has-tags-action
+# get-latest-release-action
 
 ## Inputs
 
@@ -8,12 +8,12 @@ The Github token. Not required.
 
 ## Outputs
 
-### `hasTags`
+### `release`
 
-True if you have tags in your repo.
+The latest release's tag name
 
 ## Example usage
 
 ```yaml
-uses: actions/ahzed11@has-tags-action@v1.1
+uses: actions/ahzed11@get-latest-release-action@v1.1
 ```

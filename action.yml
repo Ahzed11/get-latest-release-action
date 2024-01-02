@@ -6,8 +6,8 @@ inputs:
     required: false
     default: ${{ github.token }}
 outputs:
-  latest: # id of output
-    description: "The latest release's name"
+  release: # id of output
+    description: "The latest release's tag name"
 runs:
   using: 'node20'
   main: 'dist/index.js'
