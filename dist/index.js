@@ -30809,6 +30809,7 @@ async function run() {
     
         core.setOutput("release", release.data.tag_name);
     } catch(error) {
+        console.log(error.status)
         core.setOutput("release", "");
     }
     
